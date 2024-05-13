@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// colors
+$primary:  hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+
+$fc-primary-dark: hsl(220, 13%, 13%);
+$fc-secondary-medium-dark: hsl(219, 9%, 45%);
+
+$clr-third-light: hsl(220, 14%, 75%);
+
+$bgr-color: hsl(0, 0%, 100%);
+$bgr-hover-filter: hsl(223, 64%, 98%);
+$bgr-lightbox: hsla(0, 0%, 0%, 0.7);
+
+$font-f:"Kumbh Sans", sans-serif;
+
+$fs-regular: 16px;
+$fs-big: 1.2em;
+$fs-small: .9em;
+
+$fw-regular: 400;
+$fw-bold: 700;
+
+// mixin
+@mixin flex($justify-flex, $align-flex, $flex-gap) {
+    display: flex;
+    justify-content: $justify-flex;
+    align-items: $align-flex;
+    gap: $flex-gap;
+}

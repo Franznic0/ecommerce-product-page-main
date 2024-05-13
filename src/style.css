@@ -1,1 +1,125 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header,
+main,
+footer {
+  padding: 0 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  height: 4rem;
+  padding: 1rem 2rem;
+}
+header #menu_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+header #menu_wrapper nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 0;
+  background-color: hsla(0, 0%, 0%, 0.7);
+}
+header #menu_wrapper nav #menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 100vh;
+}
+header #menu_wrapper nav #menu #close_menu {
+  display: block;
+  margin-block: 0.5rem 1rem;
+}
+header #menu_wrapper nav #menu .links {
+  font-weight: 700;
+}
+header #menu_wrapper nav.active {
+  width: 100%;
+  transition: 0.3s ease;
+}
+header #menu_wrapper nav.active #menu {
+  opacity: 1;
+  visibility: visible;
+  width: 60%;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.2s;
+}
+header #user-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+header #user-wrapper #cart #cart_menu {
+  visibility: hidden;
+  scale: 0;
+  position: absolute;
+  top: 4.5rem;
+  left: 0.5rem;
+  width: 95%;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+}
+header #user-wrapper #cart #cart_menu .cart_menu_header {
+  padding: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+header #user-wrapper #cart #cart_menu .cart_menu_body {
+  padding: 1rem;
+}
+header #user-wrapper #cart #cart_menu .cart_menu_body p {
+  margin: 3rem auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 700;
+  color: hsl(219, 9%, 45%);
+}
+header #user-wrapper #cart #cart_menu.active {
+  visibility: visible;
+  scale: 1;
+  transition: 0.3s ease;
+}
+header #user-wrapper #user_menu {
+  width: 1.25rem;
+}/*# sourceMappingURL=style.css.map */
