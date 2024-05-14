@@ -104,7 +104,6 @@ header #user-wrapper #cart #cart_menu {
   width: 95%;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
-  box-shadow: -1px 11px 40px 0px hsl(220, 13%, 13%);
 }
 header #user-wrapper #cart #cart_menu .cart_menu_header {
   padding: 1rem;
@@ -280,4 +279,78 @@ header #user-wrapper #user_menu {
 .attribution a {
   color: hsl(26, 100%, 55%);
   font-weight: 700;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media screen and (min-width: 680px) {
+  svg {
+    scale: 1;
+  }
+  header,
+  section,
+  footer {
+    padding: 3rem 8rem;
+  }
+  header {
+    position: relative;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    width: calc(100% - 16rem);
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+  }
+  header #menu_wrapper #burger {
+    display: none;
+  }
+  header #menu_wrapper nav {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+  header #menu_wrapper nav #menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: auto;
+  }
+  header #menu_wrapper nav #menu #close_menu {
+    display: none;
+  }
+  header #menu_wrapper nav #menu .links {
+    position: relative;
+  }
+  header #menu_wrapper nav #menu .links::before {
+    content: "";
+    position: absolute;
+    bottom: -2.4rem;
+    left: 0;
+    width: 100%;
+    scale: 0;
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+  }
+  header #menu_wrapper nav #menu .links:hover::before {
+    scale: 1;
+    transition: 0.2s ease-out;
+  }
+  header #user-wrapper #cart #cart_menu {
+    visibility: visible;
+    scale: 1;
+    right: 4rem;
+    width: 10rem;
+  }
+  header #user-wrapper #cart:hover,
+  header #user-wrapper #user_menu:hover {
+    cursor: pointer;
+  }
+  header #user-wrapper #user_menu:hover {
+    border: 2px solid hsl(26, 100%, 55%);
+  }
+}/*# sourceMappingURL=desktop.css.map */

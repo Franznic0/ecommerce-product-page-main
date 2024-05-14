@@ -1,0 +1,103 @@
+@import './style.scss';
+
+@media screen and (min-width: 680px) {
+    svg {
+        scale: 1;
+    }
+
+    header,
+    section,
+    footer {
+        padding: 3rem 8rem;
+    }
+
+    header {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            width: calc(100% - 16rem);
+
+            border-bottom: 1px solid $clr-third-light;
+        }
+
+        #menu_wrapper {
+            
+            #burger {
+                display: none; 
+            }
+
+            nav{
+                position: relative;
+
+                height: auto;
+                width: 100%;
+                margin: auto;
+
+                #menu {
+                    @include flex(space-evenly, center, 1rem);
+                    flex-direction: row;
+
+                    opacity: 1;
+                    visibility: visible;
+                    width: 100%;
+                    height: auto;
+
+                    #close_menu {
+                        display: none;
+                    }
+
+                    .links {
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: -2.4rem;
+                            left: 0;
+                            width: 100%;
+                            scale: 0;
+                
+                            border-bottom: 3px solid $primary;
+                        }
+                        
+                    }
+                    .links:hover {
+                        
+                        &::before {
+                            scale: 1;
+                            transition: .2s ease-out;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        #user-wrapper {
+            #cart {
+                #cart_menu {
+                    visibility: visible;
+                    scale: 1;
+
+                    
+                    right: 4rem;
+                    width: 10rem;
+                }
+
+            }
+
+            #cart:hover,
+            #user_menu:hover 
+            {
+                cursor: pointer;
+            }
+
+            #user_menu:hover {
+                border: 2px solid $primary;
+            }
+        }
+    }
+}

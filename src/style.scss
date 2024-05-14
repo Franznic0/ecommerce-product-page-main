@@ -100,6 +100,7 @@ header {
                 scale: 0;
 
                 position: absolute;
+                z-index: 3;
                 top: 4rem;
                 left: .5rem;
 
@@ -107,6 +108,7 @@ header {
                 border-radius: 10px;
 
                 background-color: $bgr-color;
+                box-shadow: -1px 11px 40px 0px $fc-primary-dark;
 
                 .cart_menu_header {
                     padding: 1rem;
@@ -136,6 +138,8 @@ header {
 
         #user_menu {
             width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
         }
     }
 }
