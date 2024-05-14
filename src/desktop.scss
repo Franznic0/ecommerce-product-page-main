@@ -79,12 +79,10 @@
         #user-wrapper {
             #cart {
                 #cart_menu {
-                    visibility: visible;
-                    scale: 1;
-
-                    
-                    right: 4rem;
-                    width: 10rem;
+                    top: 3rem;
+                    left: auto;
+                    right: -6rem;
+                    width: 20rem;
                 }
 
             }
@@ -99,5 +97,11 @@
                 border: 2px solid $primary;
             }
         }
+    }
+
+    main {
+        @include gridCenter;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 4rem 8rem;
     }
 }

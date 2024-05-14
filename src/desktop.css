@@ -94,6 +94,9 @@ header #user-wrapper {
   align-items: center;
   gap: 1.25rem;
 }
+header #user-wrapper #cart {
+  position: relative;
+}
 header #user-wrapper #cart #cart_menu {
   visibility: hidden;
   scale: 0;
@@ -104,6 +107,7 @@ header #user-wrapper #cart #cart_menu {
   width: 95%;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
+  box-shadow: -1px 11px 40px 0px hsl(220, 13%, 13%);
 }
 header #user-wrapper #cart #cart_menu .cart_menu_header {
   padding: 1rem;
@@ -341,10 +345,10 @@ header #user-wrapper #user_menu {
     transition: 0.2s ease-out;
   }
   header #user-wrapper #cart #cart_menu {
-    visibility: visible;
-    scale: 1;
-    right: 4rem;
-    width: 10rem;
+    top: 3rem;
+    left: auto;
+    right: -6rem;
+    width: 20rem;
   }
   header #user-wrapper #cart:hover,
   header #user-wrapper #user_menu:hover {
@@ -352,5 +356,11 @@ header #user-wrapper #user_menu {
   }
   header #user-wrapper #user_menu:hover {
     border: 2px solid hsl(26, 100%, 55%);
+  }
+  main {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem 8rem;
   }
 }/*# sourceMappingURL=desktop.css.map */

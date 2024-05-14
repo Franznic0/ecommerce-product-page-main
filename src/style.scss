@@ -94,6 +94,7 @@ header {
         @include flex(space-between,center,1.25rem);
 
         #cart {
+            position: relative;
 
             #cart_menu {
                 visibility: hidden;
