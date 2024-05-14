@@ -20,6 +20,7 @@ footer {
 img,
 svg {
   width: 100%;
+  height: 100%;
 }
 
 svg {
@@ -289,6 +290,9 @@ header #user-wrapper #user_menu {
   svg {
     scale: 1;
   }
+  button:hover {
+    cursor: pointer;
+  }
   header,
   section,
   footer {
@@ -362,5 +366,49 @@ header #user-wrapper #user_menu {
     place-content: center;
     grid-template-columns: repeat(2, 1fr);
     padding: 4rem 8rem;
+  }
+  main .carousel {
+    overflow: auto;
+    flex-direction: column;
+    gap: 2rem;
+    width: auto;
+    height: auto;
+  }
+  main .carousel .myslides {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  main .carousel .myslides:hover {
+    cursor: pointer;
+  }
+  main .carousel .prev,
+  main .carousel .next {
+    display: none;
+  }
+  main .carousel .row {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-direction: row;
+  }
+  main .carousel .row .column {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid transparent;
+    height: 7rem;
+  }
+  main .carousel .row .column .demo {
+    width: 100%;
+    height: 100%;
+  }
+  main .carousel .row .column:hover {
+    cursor: pointer;
+    border: 3px solid hsl(26, 100%, 55%);
+  }
+  main .carousel .row:hover .column:not(:hover) {
+    filter: grayscale(80%);
+    transition: 0.2s ease;
   }
 }/*# sourceMappingURL=desktop.css.map */
