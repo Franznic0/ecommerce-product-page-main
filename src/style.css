@@ -7,18 +7,23 @@
 html {
   background-color: hsl(0, 0%, 100%);
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 16px;
+  font-size: clamp(11px, 2vw, 16px);
   font-weight: 400;
 }
 
 header,
 section,
 footer {
-  padding: 1rem 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
 
-img {
+img,
+svg {
   width: 100%;
+}
+
+svg {
+  scale: 0.8;
 }
 
 li {
@@ -36,7 +41,7 @@ header {
   align-items: center;
   gap: 1rem;
   position: relative;
-  height: 4rem;
+  height: 3.5rem;
 }
 header #menu_wrapper {
   display: flex;
@@ -93,7 +98,7 @@ header #user-wrapper #cart #cart_menu {
   visibility: hidden;
   scale: 0;
   position: absolute;
-  top: 4.5rem;
+  top: 4rem;
   left: 0.5rem;
   width: 95%;
   border-radius: 10px;
@@ -120,7 +125,7 @@ header #user-wrapper #cart #cart_menu.active {
   transition: 0.3s ease;
 }
 header #user-wrapper #user_menu {
-  width: 1.3rem;
+  width: 2rem;
 }
 
 .carousel {
@@ -129,33 +134,146 @@ header #user-wrapper #user_menu {
   justify-content: center;
   align-items: center;
   gap: 0;
-  overflow-x: scroll;
+  overflow: hidden;
   scroll-behavior: smooth;
   padding: 0;
   width: 100%;
+  height: 22em;
 }
 .carousel .myslides {
-  width: 100vh;
-  min-height: 20rem;
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 22rem;
 }
-.carousel .prev {
+.carousel .myslides:nth-child(1) {
+  display: block;
+}
+.carousel .prev,
+.carousel .next {
+  display: grid;
+  place-content: center;
   position: absolute;
-  top: 50%;
-  left: 0.5rem;
-  width: 3rem;
+  width: 2rem;
   aspect-ratio: 1/1;
   background-color: hsl(223, 64%, 98%);
   border-radius: 50%;
 }
-.carousel .prev svg {
-  display: block;
+.carousel .prev svg,
+.carousel .next svg {
+  scale: 0.6;
+}
+.carousel .prev {
+  left: 0.5rem;
 }
 .carousel .next {
-  position: absolute;
-  top: 50%;
   right: 0.5rem;
-  height: 100%;
 }
 .carousel .row {
   display: none;
+}
+
+.product_description {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.product_description .brand {
+  text-transform: uppercase;
+  color: hsl(26, 100%, 55%);
+  font-weight: 700;
+  font-size: clamp(11px, 2vw, 16px);
+}
+.product_description .title {
+  font-size: 2.3em;
+}
+.product_description .description {
+  color: hsl(219, 9%, 45%);
+  font-size: clamp(11px, 2vw, 16px);
+  line-height: 1.7em;
+}
+.product_description .price_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.product_description .price_wrapper .price_to_pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.product_description .price_wrapper .price_to_pay .price {
+  font-weight: 700;
+  font-size: 2.3em;
+}
+.product_description .price_wrapper .price_to_pay .discount {
+  background-color: hsl(25, 100%, 94%);
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: hsl(26, 100%, 55%);
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.product_description .price_wrapper .original_price {
+  color: hsl(220, 14%, 75%);
+  font-weight: 700;
+  text-decoration: line-through;
+  font-size: 1.2em;
+}
+
+.select_quantity_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  margin-block: 1rem;
+  border-radius: 10px;
+  background-color: hsl(223, 64%, 98%);
+}
+.select_quantity_wrapper #subtract,
+.select_quantity_wrapper #add {
+  display: grid;
+  place-content: center;
+  border: none;
+  background-color: transparent;
+}
+.select_quantity_wrapper .quantity_to_add {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+#add_to_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(25, 100%, 94%);
+  font-weight: 700;
+  border-radius: 10px;
+  box-shadow: 0px 27px 37px -17px hsl(26, 100%, 55%);
+}
+#add_to_cart svg {
+  width: -moz-fit-content;
+  width: fit-content;
+  fill: hsl(25, 100%, 94%);
+  scale: 0.65;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(26, 100%, 55%);
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

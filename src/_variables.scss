@@ -19,8 +19,8 @@ $bgr-lightbox: hsla(0, 0%, 0%, 0.7);
 
 $font-f:"Kumbh Sans", sans-serif;
 
-$fs-regular: 16px;
-$fs-big: 1.2em;
+$fs-regular: clamp(11px, 2vw, 16px);
+$fs-big: 2.3em;
 $fs-small: .9em;
 
 $fw-regular: 400;
@@ -32,4 +32,9 @@ $fw-bold: 700;
     justify-content: $justify-flex;
     align-items: $align-flex;
     gap: $flex-gap;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-content: center;
 }
