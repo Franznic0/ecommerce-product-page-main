@@ -59,9 +59,11 @@ header #menu_wrapper nav {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 6;
   height: 100vh;
   width: 0;
   background-color: hsla(0, 0%, 0%, 0.7);
+  transition: 0.1s ease;
 }
 header #menu_wrapper nav #menu {
   display: flex;
@@ -75,6 +77,8 @@ header #menu_wrapper nav #menu {
   visibility: hidden;
   width: 0;
   height: 100vh;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.2s;
 }
 header #menu_wrapper nav #menu #close_menu {
   display: block;
@@ -85,14 +89,12 @@ header #menu_wrapper nav #menu .links {
 }
 header #menu_wrapper nav.active {
   width: 100%;
-  transition: 0.3s ease;
+  z-index: 6;
 }
 header #menu_wrapper nav.active #menu {
   opacity: 1;
   visibility: visible;
   width: 60%;
-  transition: all 0.3s ease-out;
-  transition-delay: 0.2s;
 }
 header #user-wrapper {
   display: flex;

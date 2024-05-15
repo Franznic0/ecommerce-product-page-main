@@ -49,11 +49,14 @@ header {
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 6;
     
             height: 100vh;
             width: 0;
             
             background-color: $bgr-lightbox;
+            
+            transition: .1s ease;
                     
             #menu {
                 @include flex(flex-start, start, 1rem);
@@ -67,6 +70,9 @@ header {
                 visibility: hidden;
                 width: 0;
                 height: 100vh;
+
+                transition: all .3s ease-out;
+                transition-delay: .2s;
     
                 #close_menu {
                     display: block;
@@ -83,15 +89,13 @@ header {
         
         nav.active {
             width: 100%;
-            transition: .3s ease;
+            z-index: 6;
         }
         
         nav.active #menu {
             opacity: 1;
             visibility: visible;
             width: 60%;
-            transition: all .3s ease-out;
-            transition-delay: .2s;
         }
     }
     
