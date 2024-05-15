@@ -48,7 +48,12 @@ header #menu_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+}
+header #menu_wrapper #logo,
+header #menu_wrapper #logo svg {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 header #menu_wrapper nav {
   position: absolute;
@@ -239,7 +244,7 @@ header #user-wrapper #user_menu {
   align-items: center;
   gap: 0;
   width: 100%;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   margin-block: 1rem;
   border-radius: 10px;
   background-color: hsl(223, 64%, 98%);
@@ -250,6 +255,7 @@ header #user-wrapper #user_menu {
   place-content: center;
   border: none;
   background-color: transparent;
+  padding: 0.5rem;
 }
 .select_quantity_wrapper .quantity_to_add {
   font-weight: 700;
@@ -286,7 +292,7 @@ header #user-wrapper #user_menu {
   font-weight: 700;
 }
 
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 900px) {
   svg {
     scale: 1;
   }
@@ -371,6 +377,7 @@ header #user-wrapper #user_menu {
     overflow: auto;
     flex-direction: column;
     gap: 2rem;
+    padding: 2rem 3rem;
     width: auto;
     height: auto;
   }
@@ -397,7 +404,7 @@ header #user-wrapper #user_menu {
     border-radius: 10px;
     overflow: hidden;
     border: 3px solid transparent;
-    height: 7rem;
+    aspect-ratio: 1/1;
   }
   main .carousel .row .column .demo {
     width: 100%;
@@ -410,5 +417,15 @@ header #user-wrapper #user_menu {
   main .carousel .row:hover .column:not(:hover) {
     filter: grayscale(80%);
     transition: 0.2s ease;
+  }
+  main #product {
+    display: grid;
+    place-content: center;
+  }
+  main #add_to_cart {
+    transition: 0.2s ease-in-out;
+  }
+  main #add_to_cart:hover {
+    scale: 1.1;
   }
 }/*# sourceMappingURL=desktop.css.map */

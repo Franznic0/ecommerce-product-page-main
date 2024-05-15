@@ -39,12 +39,11 @@ header {
     height: 3.5rem;
 
     #menu_wrapper {
-        @include flex(space-between, center, 1rem);
+        @include flex(space-between, center, .5rem);
         
-        #logo {
-            svg{
-                height: auto;
-            }
+        #logo,
+        #logo svg{
+            width: fit-content;
         }
         nav {
             position: absolute;
@@ -252,10 +251,10 @@ header {
 
 .select_quantity_wrapper {
     @include flex(space-between, center, 0);
-    width: 100%;
+    max-width: 31rem;
 
-    padding: 1.5rem 2rem;
-    margin-block: 1rem;
+    padding: 1rem 2rem; 
+    margin: 1rem auto;
 
     border-radius: 10px;
     background-color: $bgr-hover-filter;
@@ -276,9 +275,10 @@ header {
 
 #add_to_cart{
     @include flex(center, center, 1rem);
-    width: 100%;
+    max-width: 31rem;
 
     padding: 1rem;
+    margin: auto;
     border: none;
 
     background-color: $primary;
