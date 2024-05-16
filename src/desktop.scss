@@ -1,3 +1,5 @@
+@import './variables';
+
 @media screen and (min-width: 900px) {
     svg {
         scale: 1;
@@ -57,10 +59,11 @@
                         &::before {
                             content: "";
                             position: absolute;
-                            bottom: -2.4rem;
+                            bottom: calc(-2.5rem + 3px);
                             left: 0;
                             width: 100%;
                             scale: 0;
+                            transition: scale .2s ease-out;
                 
                             border-bottom: 3px solid $primary;
                         }
@@ -70,7 +73,6 @@
                         
                         &::before {
                             scale: 1;
-                            transition: .2s ease-out;
                         }
                     }
                     
@@ -89,7 +91,7 @@
 
             }
 
-            #cart:hover,
+            #cart-btn:hover,
             #user_menu:hover 
             {
                 cursor: pointer;
@@ -135,10 +137,23 @@
                 flex-direction: row;
 
                 .column {
+                    position: relative;
                     border-radius: 10px;
                     overflow: hidden;
                     border: 3px solid transparent;
                     aspect-ratio: 1/1;
+                    transition: .2s ease;
+
+                    & ::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 4;
+                        background-color: red;
+                        // background-color: $bgr-color;
+                        // opacity: .3;
+                    }
 
                     .demo {
                         width: 100%;
@@ -148,25 +163,30 @@
                 
                 .column:hover {
                     cursor: pointer;
+                    filter: grayscale(80%);
+                }
+                .column.selected {
                     border: 3px solid $primary;
+                    filter:grayscale(80%);                    
                 }
                 
             }
-            .row:hover .column:not(:hover) {
-                filter:grayscale(80%);
-                transition: .2s ease;
+        }
+
+        #product{
+            padding-inline: 0;
+            
+            .purchase {
+                @include flex(space-between, center, .5rem);
             }
-        }
-        #product {
-            @include gridCenter;
-        }
-
-        #add_to_cart {
-            transition: .2s ease-in-out;
-        }
-
-        #add_to_cart:hover {
-            scale: 1.1;
+    
+            #add_to_cart {
+                transition: scale .2s ease-in-out;
+            }
+    
+            #add_to_cart:hover {
+                scale: 1.1;
+            }
         }
     }
 }

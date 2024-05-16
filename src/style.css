@@ -108,6 +108,8 @@ header #user-wrapper #cart {
 header #user-wrapper #cart #cart_menu {
   visibility: hidden;
   scale: 0;
+  transition: 0.3s ease;
+  transform-origin: top;
   position: absolute;
   z-index: 3;
   top: 4rem;
@@ -135,7 +137,6 @@ header #user-wrapper #cart #cart_menu .cart_menu_body p {
 header #user-wrapper #cart #cart_menu.active {
   visibility: visible;
   scale: 1;
-  transition: 0.3s ease;
 }
 header #user-wrapper #user_menu {
   width: 2rem;

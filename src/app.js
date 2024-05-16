@@ -4,6 +4,22 @@ const mobileMenu = document.getElementById("mobile-menu");
 const addItem = document.getElementById("add");
 const subtractItem = document.getElementById("subtract");
 const numberItems = document.querySelector(".quantity_to_add");
+const cartMenuBtn = document.getElementById("cart-btn");
+const cartMenu = document.getElementById("cart_menu");
+const thumbnails = document.querySelectorAll(".column");
+
+// picture selection
+    // style selected
+    thumbnails.forEach((thumbnailSelected) => {
+        thumbnailSelected.addEventListener("click", ()=>{
+            // remove style from all
+            for (let i = 0 ; i < thumbnails.length; i++) {
+                thumbnails[i].classList.remove("selected");
+            };
+            // add style to selected
+            thumbnailSelected.classList.toggle("selected");
+        })
+    })
 
 // toggle mobile menu
 burger.addEventListener("click", ()=>{
@@ -34,5 +50,10 @@ const changeQuantity = () => {
         );
     })
 };
+
+// open cart
+cartMenuBtn.addEventListener("click", ()=> {
+    cartMenu.classList.toggle("active");
+})
 
 changeQuantity();

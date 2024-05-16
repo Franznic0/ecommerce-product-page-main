@@ -108,6 +108,8 @@ header {
             #cart_menu {
                 visibility: hidden;
                 scale: 0;
+                transition: .3s ease;
+                transform-origin: top;
 
                 position: absolute;
                 z-index: 3;
@@ -142,7 +144,6 @@ header {
             #cart_menu.active {
                 visibility: visible;
                 scale: 1;
-                transition: .3s ease;
             }
         }
 

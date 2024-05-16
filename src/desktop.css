@@ -4,294 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: hsl(0, 0%, 100%);
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: clamp(11px, 2vw, 16px);
-  font-weight: 400;
-}
-
-header,
-section,
-footer {
-  padding: 2.5rem 1.5rem;
-}
-
-img,
-svg {
-  width: 100%;
-  height: 100%;
-}
-
-svg {
-  scale: 0.8;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-  height: 3.5rem;
-}
-header #menu_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-}
-header #menu_wrapper #logo,
-header #menu_wrapper #logo svg {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-header #menu_wrapper nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 0;
-  background-color: hsla(0, 0%, 0%, 0.7);
-}
-header #menu_wrapper nav #menu {
-  display: flex;
-  justify-content: flex-start;
-  align-items: start;
-  gap: 1rem;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: hsl(0, 0%, 100%);
-  opacity: 0;
-  visibility: hidden;
-  width: 0;
-  height: 100vh;
-}
-header #menu_wrapper nav #menu #close_menu {
-  display: block;
-  margin-block: 0.5rem 1rem;
-}
-header #menu_wrapper nav #menu .links {
-  font-weight: 700;
-}
-header #menu_wrapper nav.active {
-  width: 100%;
-  transition: 0.3s ease;
-}
-header #menu_wrapper nav.active #menu {
-  opacity: 1;
-  visibility: visible;
-  width: 60%;
-  transition: all 0.3s ease-out;
-  transition-delay: 0.2s;
-}
-header #user-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.25rem;
-}
-header #user-wrapper #cart {
-  position: relative;
-}
-header #user-wrapper #cart #cart_menu {
-  visibility: hidden;
-  scale: 0;
-  position: absolute;
-  z-index: 3;
-  top: 4rem;
-  left: 0.5rem;
-  width: 95%;
-  border-radius: 10px;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: -1px 11px 40px 0px hsl(220, 13%, 13%);
-}
-header #user-wrapper #cart #cart_menu .cart_menu_header {
-  padding: 1rem;
-  font-weight: 700;
-  border-bottom: 1px solid hsl(220, 14%, 75%);
-}
-header #user-wrapper #cart #cart_menu .cart_menu_body {
-  padding: 1rem;
-}
-header #user-wrapper #cart #cart_menu .cart_menu_body p {
-  margin: 3rem auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: 700;
-  color: hsl(219, 9%, 45%);
-}
-header #user-wrapper #cart #cart_menu.active {
-  visibility: visible;
-  scale: 1;
-  transition: 0.3s ease;
-}
-header #user-wrapper #user_menu {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-}
-
-.carousel {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  padding: 0;
-  width: 100%;
-  height: 22em;
-}
-.carousel .myslides {
-  display: none;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-height: 22rem;
-}
-.carousel .myslides:nth-child(1) {
-  display: block;
-}
-.carousel .prev,
-.carousel .next {
-  display: grid;
-  place-content: center;
-  position: absolute;
-  width: 2rem;
-  aspect-ratio: 1/1;
-  background-color: hsl(223, 64%, 98%);
-  border-radius: 50%;
-}
-.carousel .prev svg,
-.carousel .next svg {
-  scale: 0.6;
-}
-.carousel .prev {
-  left: 0.5rem;
-}
-.carousel .next {
-  right: 0.5rem;
-}
-.carousel .row {
-  display: none;
-}
-
-.product_description {
-  display: flex;
-  justify-content: center;
-  align-items: left;
-  gap: 1.5rem;
-  flex-direction: column;
-}
-.product_description .brand {
-  text-transform: uppercase;
-  color: hsl(26, 100%, 55%);
-  font-weight: 700;
-  font-size: clamp(11px, 2vw, 16px);
-}
-.product_description .title {
-  font-size: 2.3em;
-}
-.product_description .description {
-  color: hsl(219, 9%, 45%);
-  font-size: clamp(11px, 2vw, 16px);
-  line-height: 1.7em;
-}
-.product_description .price_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.product_description .price_wrapper .price_to_pay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-.product_description .price_wrapper .price_to_pay .price {
-  font-weight: 700;
-  font-size: 2.3em;
-}
-.product_description .price_wrapper .price_to_pay .discount {
-  background-color: hsl(25, 100%, 94%);
-  padding: 0.5rem;
-  border-radius: 5px;
-  color: hsl(26, 100%, 55%);
-  font-weight: 700;
-  font-size: 1.2em;
-}
-.product_description .price_wrapper .original_price {
-  color: hsl(220, 14%, 75%);
-  font-weight: 700;
-  text-decoration: line-through;
-  font-size: 1.2em;
-}
-
-.select_quantity_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  margin-block: 1rem;
-  border-radius: 10px;
-  background-color: hsl(223, 64%, 98%);
-}
-.select_quantity_wrapper #subtract,
-.select_quantity_wrapper #add {
-  display: grid;
-  place-content: center;
-  border: none;
-  background-color: transparent;
-  padding: 0.5rem;
-}
-.select_quantity_wrapper .quantity_to_add {
-  font-weight: 700;
-  font-size: 1.2em;
-}
-
-#add_to_cart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  background-color: hsl(26, 100%, 55%);
-  color: hsl(25, 100%, 94%);
-  font-weight: 700;
-  border-radius: 10px;
-  box-shadow: 0px 27px 37px -17px hsl(26, 100%, 55%);
-}
-#add_to_cart svg {
-  width: -moz-fit-content;
-  width: fit-content;
-  fill: hsl(25, 100%, 94%);
-  scale: 0.65;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(26, 100%, 55%);
-  font-weight: 700;
-}
-
 @media screen and (min-width: 900px) {
   svg {
     scale: 1;
@@ -344,15 +56,15 @@ header #user-wrapper #user_menu {
   header #menu_wrapper nav #menu .links::before {
     content: "";
     position: absolute;
-    bottom: -2.4rem;
+    bottom: calc(-2.5rem + 3px);
     left: 0;
     width: 100%;
     scale: 0;
+    transition: scale 0.2s ease-out;
     border-bottom: 3px solid hsl(26, 100%, 55%);
   }
   header #menu_wrapper nav #menu .links:hover::before {
     scale: 1;
-    transition: 0.2s ease-out;
   }
   header #user-wrapper #cart #cart_menu {
     top: 3rem;
@@ -360,7 +72,7 @@ header #user-wrapper #user_menu {
     right: -6rem;
     width: 20rem;
   }
-  header #user-wrapper #cart:hover,
+  header #user-wrapper #cart-btn:hover,
   header #user-wrapper #user_menu:hover {
     cursor: pointer;
   }
@@ -370,7 +82,7 @@ header #user-wrapper #user_menu {
   main {
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     padding: 4rem 8rem;
   }
   main .carousel {
@@ -401,10 +113,20 @@ header #user-wrapper #user_menu {
     flex-direction: row;
   }
   main .carousel .row .column {
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
     border: 3px solid transparent;
     aspect-ratio: 1/1;
+    transition: 0.2s ease;
+  }
+  main .carousel .row .column ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: red;
   }
   main .carousel .row .column .demo {
     width: 100%;
@@ -412,20 +134,25 @@ header #user-wrapper #user_menu {
   }
   main .carousel .row .column:hover {
     cursor: pointer;
-    border: 3px solid hsl(26, 100%, 55%);
-  }
-  main .carousel .row:hover .column:not(:hover) {
     filter: grayscale(80%);
-    transition: 0.2s ease;
+  }
+  main .carousel .row .column.selected {
+    border: 3px solid hsl(26, 100%, 55%);
+    filter: grayscale(80%);
   }
   main #product {
-    display: grid;
-    place-content: center;
+    padding-inline: 0;
   }
-  main #add_to_cart {
-    transition: 0.2s ease-in-out;
+  main #product .purchase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
   }
-  main #add_to_cart:hover {
+  main #product #add_to_cart {
+    transition: scale 0.2s ease-in-out;
+  }
+  main #product #add_to_cart:hover {
     scale: 1.1;
   }
 }/*# sourceMappingURL=desktop.css.map */
