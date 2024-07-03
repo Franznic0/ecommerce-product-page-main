@@ -9,6 +9,7 @@ $primary:  hsl(26, 100%, 55%);
 $pale-orange: hsl(25, 100%, 94%);
 
 $fc-primary-dark: hsl(220, 13%, 13%);
+$fc-shadow: hsla(218, 12%, 13%, 0.179);
 $fc-secondary-medium-dark: hsl(219, 9%, 45%);
 
 $clr-third-light: hsl(220, 14%, 75%);
@@ -37,4 +38,5 @@ $fw-bold: 700;
 @mixin gridCenter {
     display: grid;
     place-content: center;
+    place-items: center;
 }

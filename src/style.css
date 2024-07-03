@@ -63,7 +63,6 @@ header #menu_wrapper nav {
   height: 100vh;
   width: 0;
   background-color: hsla(0, 0%, 0%, 0.7);
-  transition: 0.1s ease;
 }
 header #menu_wrapper nav #menu {
   display: flex;
@@ -77,8 +76,7 @@ header #menu_wrapper nav #menu {
   visibility: hidden;
   width: 0;
   height: 100vh;
-  transition: all 0.3s ease-out;
-  transition-delay: 0.2s;
+  transition: width 0.3s ease-out;
 }
 header #menu_wrapper nav #menu #close_menu {
   display: block;
@@ -102,9 +100,6 @@ header #user-wrapper {
   align-items: center;
   gap: 1.25rem;
 }
-header #user-wrapper #cart {
-  position: relative;
-}
 header #user-wrapper #cart #cart_menu {
   visibility: hidden;
   scale: 0;
@@ -112,12 +107,12 @@ header #user-wrapper #cart #cart_menu {
   transform-origin: top;
   position: absolute;
   z-index: 3;
-  top: 4rem;
-  left: 0.5rem;
+  top: 5.5rem;
+  left: 1rem;
   width: 95%;
   border-radius: 10px;
   background-color: hsl(0, 0%, 100%);
-  box-shadow: -1px 11px 40px 0px hsl(220, 13%, 13%);
+  box-shadow: -1px 20px 20px 0px hsla(218, 12%, 13%, 0.179);
 }
 header #user-wrapper #cart #cart_menu .cart_menu_header {
   padding: 1rem;
@@ -142,6 +137,10 @@ header #user-wrapper #user_menu {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  border: 2px solid white;
+  background-image: url(../images/image-avatar.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .carousel {
@@ -154,30 +153,27 @@ header #user-wrapper #user_menu {
   scroll-behavior: smooth;
   padding: 0;
   width: 100%;
-  height: 22em;
+  max-height: 27em;
 }
-.carousel .myslides {
+.carousel .mySlides {
   display: none;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-height: 22rem;
-}
-.carousel .myslides:nth-child(1) {
-  display: block;
+  max-width: 35rem;
+  height: 100%;
 }
 .carousel .prev,
 .carousel .next {
   display: grid;
   place-content: center;
+  place-items: center;
   position: absolute;
-  width: 2rem;
-  aspect-ratio: 1/1;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: hsl(223, 64%, 98%);
   border-radius: 50%;
 }
 .carousel .prev svg,
 .carousel .next svg {
-  scale: 0.6;
+  scale: 0.7;
 }
 .carousel .prev {
   left: 0.5rem;
@@ -185,8 +181,24 @@ header #user-wrapper #user_menu {
 .carousel .next {
   right: 0.5rem;
 }
+.carousel .fade {
+  animation: fade 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .carousel .row {
   display: none;
+}
+
+.modal-carousel {
+  display: none;
+  z-index: 9;
 }
 
 .product_description {
@@ -256,6 +268,7 @@ header #user-wrapper #user_menu {
 .select_quantity_wrapper #add {
   display: grid;
   place-content: center;
+  place-items: center;
   border: none;
   background-color: transparent;
   padding: 0.5rem;

@@ -53,7 +53,6 @@
         </div>
       </div>
       <div id="user_menu">
-        <img src="../images/image-avatar.png" alt="User profile">
       </div>
     </div>
   </header>
@@ -61,45 +60,99 @@
   <main>
     <!-- carousel section -->
     <section class="carousel">
-      <div class="myslides fade">
-        <img src="../images/image-product-1.jpg" style="width:100%">
+      <div class="mySlides fade" onclick="openModal(); currentSlide(1)">
+        <img src="../images/image-product-1.jpg" alt="">
       </div>
       
-      <div class="myslides fade">
-        <img src="../images/image-product-2.jpg" style="width:100%">
+      <div class="mySlides fade" onclick="openModal()">
+        <img src="../images/image-product-2.jpg" alt="">
       </div>
 
-      <div class="myslides fade">
-        <img src="../images/image-product-3.jpg" style="width:100%">
+      <div class="mySlides fade" onclick="openModal()">
+        <img src="../images/image-product-3.jpg" alt="">
       </div>
       
-      <div class="myslides fade">
-        <img src="../images/image-product-4.jpg" style="width:100%">
+      <div class="mySlides fade" onclick="openModal()">
+        <img src="../images/image-product-4.jpg" alt="">
       </div>
 
       <!-- Next and previous buttons -->
-      <div class="prev" onclick="plusSlides(-1)">
+      <div class="prev" onclick="plusSlide(-1)">
         <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
       </div>
-      <div class="next" onclick="plusSlides(1)">
+      <div class="next" onclick="plusSlide(1)">
         <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
       </div>
 
       <!-- Thumbnail images -->
       <div class="row">
-        <div class="column">
-          <img class="demo cursor" src="../images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" alt="">
+        <div class="column" onclick="currentSlide(1)">
+          <img class="demo cursor" src="../images/image-product-1-thumbnail.jpg" alt="">
         </div>
-        <div class="column">
-          <img class="demo cursor" src="../images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" alt="">
+        <div class="column" onclick="currentSlide(2)">
+          <img class="demo cursor" src="../images/image-product-2-thumbnail.jpg" alt="">
         </div>
-        <div class="column">
-          <img class="demo cursor" src="../images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" alt="">
+        <div class="column" onclick="currentSlide(3)">
+          <img class="demo cursor" src="../images/image-product-3-thumbnail.jpg" alt="">
         </div>
-        <div class="column">
-          <img class="demo cursor" src="../images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" alt="">
+        <div class="column" onclick="currentSlide(4)">
+          <img class="demo cursor" src="../images/image-product-4-thumbnail.jpg" alt="">
         </div>
       </div>
+
+    </section>
+    
+    <!-- modal section -->
+    <section class="modal-carousel">
+
+      <!-- close modal -->
+        <div id="close-modal" onclick="closeModal()">
+         <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="hsl(26, 100%, 55%)" fill-rule="evenodd"/></svg>
+        </div>
+
+        <div class="modal-content">
+
+          <!-- modal image -->
+          <div class="mySlidesModal fade">
+            <img src="../images/image-product-1.jpg" alt="">
+          </div>
+          
+          <div class="mySlidesModal fade">
+            <img src="../images/image-product-2.jpg"alt="">
+          </div>
+    
+          <div class="mySlidesModal fade">
+            <img src="../images/image-product-3.jpg" alt="">
+          </div>
+          
+          <div class="mySlidesModal fade">
+            <img src="../images/image-product-4.jpg" alt="">
+          </div>
+    
+          <!-- Next and previous buttons -->
+          <div class="prev" onclick="plusSlideModal(-1)">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="next" onclick="plusSlideModal(1)">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+          
+          <!-- Thumbnail images -->
+          <div class="row">
+            <div class="column thumb-modal" onclick="currentSlideModal(1)">
+              <img class="demo cursor" src="../images/image-product-1-thumbnail.jpg" alt="">
+            </div>
+            <div class="column thumb-modal" onclick="currentSlideModal(2)">
+              <img class="demo cursor" src="../images/image-product-2-thumbnail.jpg" alt="">
+            </div>
+            <div class="column thumb-modal" onclick="currentSlideModal(3)">
+              <img class="demo cursor" src="../images/image-product-3-thumbnail.jpg" alt="">
+            </div>
+            <div class="column thumb-modal" onclick="currentSlideModal(4)">
+              <img class="demo cursor" src="../images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+          </div>
 
     </section>
 

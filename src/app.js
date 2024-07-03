@@ -7,19 +7,109 @@ const numberItems = document.querySelector(".quantity_to_add");
 const cartMenuBtn = document.getElementById("cart-btn");
 const cartMenu = document.getElementById("cart_menu");
 const thumbnails = document.querySelectorAll(".column");
+const thumbnailsModal = document.querySelectorAll(".thumb-modal");
 
-// picture selection
-    // style selected
-    thumbnails.forEach((thumbnailSelected) => {
-        thumbnailSelected.addEventListener("click", ()=>{
-            // remove style from all
-            for (let i = 0 ; i < thumbnails.length; i++) {
-                thumbnails[i].classList.remove("selected");
-            };
-            // add style to selected
-            thumbnailSelected.classList.toggle("selected");
-        })
-    })
+// toggle modal open/close
+let modal = document.querySelector(".modal-carousel");
+function openModal() {
+    modal.classList.toggle("modal-open");
+}
+
+function closeModal() {
+    modal.classList.toggle("modal-open");
+}
+
+// slider
+let slideIndex = 1;
+showSlide(slideIndex);
+showSlideModal(slideIndex);
+
+// next/prev control
+function plusSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+// next/prev control modal
+function plusSlideModal(n) {
+    showSlideModal(slideIndex += n);
+    thumbStylePlus(n);
+}
+
+// thumbnail control
+function currentSlide(n) {
+    showSlide(slideIndex = n);
+}
+
+// thumbnail control modal
+function currentSlideModal(n) {
+    showSlideModal(slideIndex = n);
+}
+
+// show slides
+function showSlide(n) {
+    let slides = document.querySelectorAll(".mySlides");
+
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (let i=0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+     // remove style from all thumb
+    for (let i = 0 ; i < thumbnails.length; i++) {
+        thumbnails[i].classList.remove("selected");
+    };
+     //  toggle thumbnail style
+    thumbnails[slideIndex-1].classList.toggle("selected");
+
+    slides[slideIndex-1].style.display = "block";
+}
+
+// show slides modal
+function showSlideModal(n) {
+    let slidesModal = document.querySelectorAll(".mySlidesModal");
+
+    if (n > slidesModal.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slidesModal.length;
+    }
+    for (let i=0; i < slidesModal.length; i++) {
+        slidesModal[i].style.display = "none";
+    }
+    
+     // remove style from all thumb
+    for (let i = 0 ; i < thumbnailsModal.length; i++) {
+        thumbnailsModal[i].classList.remove("selected");
+    };
+    //  display imagine
+    slidesModal[slideIndex-1].style.display = "block";
+    //  toggle thumbnail style
+    thumbnailsModal[slideIndex-1].classList.toggle("selected");
+}
+
+// // style selected
+// thumbnails.forEach((thumbnailSelected) => {
+//     thumbnailSelected.addEventListener("click", ()=>{
+//         for (let i = 0 ; i < thumbnails.length; i++) {
+//             thumbnails[i].classList.remove("selected");
+//         };
+//         // add style to selected
+//         thumbnailSelected.classList.toggle("selected");
+//     })
+// })
+
+// // thumbnail style selected modal on change imagine
+// function thumbStylePlus(n) {
+//     // remove style from all
+//     // add style to selected
+//     thumbnailsModal[n-1].classList.toggle("selected");
+// }
 
 // toggle mobile menu
 burger.addEventListener("click", ()=>{
@@ -51,7 +141,7 @@ const changeQuantity = () => {
     })
 };
 
-// open cart
+// cart toggle
 cartMenuBtn.addEventListener("click", ()=> {
     cartMenu.classList.toggle("active");
 })

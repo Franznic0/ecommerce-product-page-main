@@ -39,6 +39,7 @@
                 height: auto;
                 width: 100%;
                 margin: auto;
+                z-index: 0;
 
                 #menu {
                     @include flex(space-evenly, center, 1rem);
@@ -82,6 +83,7 @@
 
         #user-wrapper {
             #cart {
+                position: relative;
                 #cart_menu {
                     top: 3rem;
                     left: auto;
@@ -105,6 +107,7 @@
 
     main {
         @include gridCenter;
+        gap: 5rem;
         grid-template-columns: repeat(2, 50%);
         padding: 4rem 8rem;
 
@@ -112,30 +115,32 @@
             overflow: auto;
             flex-direction: column;
             gap: 2rem;
-            padding: 2rem 3rem;
-
-            width: auto;
+            padding: 0 3rem;
+            
+            max-width: 28rem;
             height: auto;
-
-            .myslides{
+            
+            .mySlides{
                 border-radius: 10px;
                 overflow: hidden;
+                
+                width: 100%;
             }
-
-            .myslides:hover {
+            
+            .mySlides:hover {
                 cursor: pointer;
             }
-
+            
             .prev,
             .next {
                 display: none;
             }
-
+            
             .row {
                 display: block;
-                @include flex(center, center, 1.5rem);
+                @include flex(center, center, .7rem);
                 flex-direction: row;
-
+                
                 .column {
                     position: relative;
                     border-radius: 10px;
@@ -143,16 +148,25 @@
                     border: 3px solid transparent;
                     aspect-ratio: 1/1;
                     transition: .2s ease;
-
-                    & ::before {
+                    
+                    &::before {
                         content: "";
+                        display: block;
                         position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: 4;
-                        background-color: red;
-                        // background-color: $bgr-color;
-                        // opacity: .3;
+                        z-index: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: .6;
+                        border: 3px solid transparent;
+                        transition: all 0.3s ease;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        &::before {
+                            background-color: white;
+                        }
                     }
 
                     .demo {
@@ -160,33 +174,143 @@
                         height: 100%;
                     }
                 }
-                
-                .column:hover {
-                    cursor: pointer;
-                    filter: grayscale(80%);
-                }
-                .column.selected {
+
+                .column.selected{
                     border: 3px solid $primary;
-                    filter:grayscale(80%);                    
+                }
+                
+                .column.selected::before{
+                    background-color: white;                  
                 }
                 
             }
         }
 
+        .modal-carousel {
+            position: absolute;
+            gap: 1rem;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+
+            background-color: $bgr-lightbox;
+
+            #close-modal {
+                width: 1rem;
+                justify-self: right;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .modal-content {
+                position: relative;
+                width: max-content;
+            }
+
+            .mySlidesModal {
+                position: relative;
+                display: none;
+                width: 100%;
+                height: 30rem;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .prev,
+            .next {
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                @include gridCenter;
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                background-color: $bgr-color;
+            }
+            
+            .next {
+                right: 0;
+                transform: translate(50%, -50%);
+            }
+
+            .prev:hover,
+            .next:hover {
+                cursor: pointer;
+
+                svg>path {
+                    fill: $primary;
+                }
+            }
+
+            .row {
+                @include flex(space-between, center, 1rem);
+                flex-direction: row;
+
+                .column {
+                    position: relative;
+                    width: 6rem;
+                    height: 6rem;
+                    border-radius: 5px;
+                    border: 3px solid transparent;
+                    overflow: hidden;
+                    transition: .2s ease;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        z-index: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: .6;
+                        border: 3px solid transparent;
+                        transition: all 0.3s ease;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        &::before {
+                            background-color: white;
+                        }
+                    }
+                }
+
+                .column.selected{
+                    border: 3px solid $primary;
+                }
+                
+                .column.selected::before{
+                    background-color: white;                  
+                }
+            }
+        }
+
+        .modal-carousel.modal-open {
+            @include gridCenter;
+        }
+        
         #product{
-            padding-inline: 0;
             
             .purchase {
                 @include flex(space-between, center, .5rem);
             }
-    
+            
             #add_to_cart {
                 transition: scale .2s ease-in-out;
             }
-    
+            
             #add_to_cart:hover {
                 scale: 1.1;
             }
+        }
+
+        section {
+            padding-inline: 2rem;
         }
     }
 }

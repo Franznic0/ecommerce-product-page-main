@@ -55,8 +55,6 @@ header {
             width: 0;
             
             background-color: $bgr-lightbox;
-            
-            transition: .1s ease;
                     
             #menu {
                 @include flex(flex-start, start, 1rem);
@@ -71,8 +69,7 @@ header {
                 width: 0;
                 height: 100vh;
 
-                transition: all .3s ease-out;
-                transition-delay: .2s;
+                transition: width .3s ease-out;
     
                 #close_menu {
                     display: block;
@@ -103,7 +100,6 @@ header {
         @include flex(space-between,center,1.25rem);
 
         #cart {
-            position: relative;
 
             #cart_menu {
                 visibility: hidden;
@@ -113,14 +109,14 @@ header {
 
                 position: absolute;
                 z-index: 3;
-                top: 4rem;
-                left: .5rem;
+                top: 5.5rem;
+                left: 1rem;
 
                 width: 95%;
                 border-radius: 10px;
 
                 background-color: $bgr-color;
-                box-shadow: -1px 11px 40px 0px $fc-primary-dark;
+                box-shadow: -1px 20px 20px 0px $fc-shadow;
 
                 .cart_menu_header {
                     padding: 1rem;
@@ -151,6 +147,11 @@ header {
             width: 2rem;
             height: 2rem;
             border-radius: 50%;
+            border: 2px solid white;
+
+            background-image: url(../images/image-avatar.png);
+            background-position: center;
+            background-size: cover;
         }
     }
 }
@@ -163,16 +164,12 @@ header {
 
     padding: 0;
     width: 100%;
-    height: 22em;
+    max-height: 27em;
     
-    .myslides {
+    .mySlides {
         display: none;
-        width: fit-content;
-        min-height: 22rem;
-    }
-    
-    .myslides:nth-child(1) {
-        display: block;
+        max-width: 35rem;
+        height: 100%;
     }
 
     .prev,
@@ -180,13 +177,13 @@ header {
         @include gridCenter;
         position: absolute;
 
-        width: 2rem;
-        aspect-ratio: 1/1;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: $bgr-hover-filter;
         border-radius: 50%;
 
         svg {
-            scale: .6;
+            scale: .7;
         }
     }
 
@@ -199,9 +196,28 @@ header {
         right: .5rem;
     }
 
+    .fade {
+        animation: fade 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
     .row {
         display: none;
     }
+}
+
+.modal-carousel {
+    display: none;
+    z-index: 9;
 }
 
 .product_description {
