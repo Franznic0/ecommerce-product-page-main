@@ -103,25 +103,43 @@ closeMobileMenu.addEventListener("click", ()=>{
 });
 
 // change quantity items
-
 let quantity = 0;
 const changeQuantity = () => {
+
+     //  increase quantity
     addItem.addEventListener("click", () => {
         quantity += 1;
         numberItems.textContent = quantity;
-    }
-    )
+    })
 
+     // decrease quantity
     subtractItem.addEventListener("click", ()=> {
 
-        if (quantity>0) {
+        if (quantity > 0) {
             quantity -= 1;
             numberItems.textContent = quantity;
         } else (
-            alert("The quantity of items can't be negative!")
+            alert("You can't sell it back!")
         );
     })
 };
+
+ // add quantity to cart
+let ordersNumber = 0;
+let ordersNumberDisplay = document.querySelector("#products-in-cart");
+let ordersNumberIcon = document.querySelector(".cart-quantity");
+
+function addQuantityToCart () {
+    // display icon  
+   ordersNumberIcon.style.display = "block";
+   ordersNumberIcon.classList.add("active");
+   ordersNumberIcon.onanimationend = () => {
+    ordersNumberIcon.classList.remove("active");
+   }
+     // add items 
+    ordersNumber += 1;
+    ordersNumberDisplay.innerHTML = ordersNumber; 
+} 
 
 // cart toggle
 cartMenuBtn.addEventListener("click", ()=> {

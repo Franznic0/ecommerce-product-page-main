@@ -101,6 +101,43 @@ header {
 
         #cart {
 
+            .cart-quantity {
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(-4.5rem, 1.5rem);
+                background-color: $primary;
+                color: $bgr-color;
+                font-size: .55em;
+                padding: .05rem .35rem;
+                border-radius: 10px;
+
+                transition: scale .2s;
+            }
+            
+            .cart-quantity.active {
+                animation: bounce .2s forwards;
+            }
+
+            @keyframes bounce {
+                0% {
+                    scale: 0;
+                }
+                20% {
+                    scale: 1.1;
+                }
+                40% {
+                    scale: 1;
+                }
+                80% {
+                    scale: 1.1;
+                }
+                100% {
+                    scale: 1;
+                }
+            }
+
             #cart_menu {
                 visibility: hidden;
                 scale: 0;

@@ -100,6 +100,39 @@ header #user-wrapper {
   align-items: center;
   gap: 1.25rem;
 }
+header #user-wrapper #cart .cart-quantity {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-4.5rem, 1.5rem);
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.55em;
+  padding: 0.05rem 0.35rem;
+  border-radius: 10px;
+  transition: scale 0.2s;
+}
+header #user-wrapper #cart .cart-quantity.active {
+  animation: bounce 0.2s forwards;
+}
+@keyframes bounce {
+  0% {
+    scale: 0;
+  }
+  20% {
+    scale: 1.1;
+  }
+  40% {
+    scale: 1;
+  }
+  80% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
 header #user-wrapper #cart #cart_menu {
   visibility: hidden;
   scale: 0;

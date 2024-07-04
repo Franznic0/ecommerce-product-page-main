@@ -86,6 +86,11 @@
         #user-wrapper {
             #cart {
                 position: relative;
+
+                .cart-quantity {
+                    transform: translate(.5rem, -.3rem);
+                }
+
                 #cart_menu {
                     top: 3rem;
                     left: auto;

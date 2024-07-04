@@ -74,6 +74,9 @@
   header #user-wrapper #cart {
     position: relative;
   }
+  header #user-wrapper #cart .cart-quantity {
+    transform: translate(0.5rem, -0.3rem);
+  }
   header #user-wrapper #cart #cart_menu {
     top: 3rem;
     left: auto;
