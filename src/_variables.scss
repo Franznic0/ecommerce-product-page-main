@@ -20,12 +20,14 @@ $bgr-lightbox: hsla(0, 0%, 0%, 0.7);
 
 $font-f:"Kumbh Sans", sans-serif;
 
-$fs-regular: clamp(11px, 2vw, 16px);
-$fs-big: 2.3em;
+$fs-regular: clamp(13px, 2vw, 16px);
+$fs-big: 2.5em;
 $fs-small: .9em;
 
 $fw-regular: 400;
 $fw-bold: 700;
+
+$radius: 10px;
 
 // mixin
 @mixin flex($justify-flex, $align-flex, $flex-gap) {

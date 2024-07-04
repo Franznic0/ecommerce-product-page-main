@@ -17,6 +17,7 @@ function openModal() {
 
 function closeModal() {
     modal.classList.toggle("modal-open");
+    slideIndex = 1;
 }
 
 // slider
@@ -32,7 +33,6 @@ function plusSlide(n) {
 // next/prev control modal
 function plusSlideModal(n) {
     showSlideModal(slideIndex += n);
-    thumbStylePlus(n);
 }
 
 // thumbnail control
@@ -87,29 +87,11 @@ function showSlideModal(n) {
     for (let i = 0 ; i < thumbnailsModal.length; i++) {
         thumbnailsModal[i].classList.remove("selected");
     };
-    //  display imagine
+     //  display imagine
     slidesModal[slideIndex-1].style.display = "block";
-    //  toggle thumbnail style
-    thumbnailsModal[slideIndex-1].classList.toggle("selected");
+     //  toggle thumbnail style
+    thumbnailsModal[slideIndex-1].classList.add("selected");
 }
-
-// // style selected
-// thumbnails.forEach((thumbnailSelected) => {
-//     thumbnailSelected.addEventListener("click", ()=>{
-//         for (let i = 0 ; i < thumbnails.length; i++) {
-//             thumbnails[i].classList.remove("selected");
-//         };
-//         // add style to selected
-//         thumbnailSelected.classList.toggle("selected");
-//     })
-// })
-
-// // thumbnail style selected modal on change imagine
-// function thumbStylePlus(n) {
-//     // remove style from all
-//     // add style to selected
-//     thumbnailsModal[n-1].classList.toggle("selected");
-// }
 
 // toggle mobile menu
 burger.addEventListener("click", ()=>{

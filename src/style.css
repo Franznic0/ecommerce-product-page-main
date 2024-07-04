@@ -7,7 +7,7 @@
 html {
   background-color: hsl(0, 0%, 100%);
   font-family: "Kumbh Sans", sans-serif;
-  font-size: clamp(11px, 2vw, 16px);
+  font-size: clamp(13px, 2vw, 16px);
   font-weight: 400;
 }
 
@@ -158,7 +158,6 @@ header #user-wrapper #user_menu {
 .carousel .mySlides {
   display: none;
   max-width: 35rem;
-  height: 100%;
 }
 .carousel .prev,
 .carousel .next {
@@ -212,14 +211,14 @@ header #user-wrapper #user_menu {
   text-transform: uppercase;
   color: hsl(26, 100%, 55%);
   font-weight: 700;
-  font-size: clamp(11px, 2vw, 16px);
+  font-size: clamp(13px, 2vw, 16px);
 }
 .product_description .title {
-  font-size: 2.3em;
+  font-size: 2.5em;
 }
 .product_description .description {
   color: hsl(219, 9%, 45%);
-  font-size: clamp(11px, 2vw, 16px);
+  font-size: clamp(13px, 2vw, 16px);
   line-height: 1.7em;
 }
 .product_description .price_wrapper {
@@ -236,12 +235,12 @@ header #user-wrapper #user_menu {
 }
 .product_description .price_wrapper .price_to_pay .price {
   font-weight: 700;
-  font-size: 2.3em;
+  font-size: 2.5em;
 }
 .product_description .price_wrapper .price_to_pay .discount {
   background-color: hsl(25, 100%, 94%);
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
   color: hsl(26, 100%, 55%);
   font-weight: 700;
   font-size: 1.2em;
@@ -259,7 +258,7 @@ header #user-wrapper #user_menu {
   align-items: center;
   gap: 0;
   max-width: 31rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   margin: 1rem auto;
   border-radius: 10px;
   background-color: hsl(223, 64%, 98%);
@@ -271,7 +270,7 @@ header #user-wrapper #user_menu {
   place-items: center;
   border: none;
   background-color: transparent;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
 }
 .select_quantity_wrapper .quantity_to_add {
   font-weight: 700;
@@ -283,7 +282,7 @@ header #user-wrapper #user_menu {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  max-width: 31rem;
+  width: min(100%, 31rem);
   padding: 1rem;
   margin: auto;
   border: none;
@@ -297,7 +296,6 @@ header #user-wrapper #user_menu {
   width: -moz-fit-content;
   width: fit-content;
   fill: hsl(25, 100%, 94%);
-  scale: 0.65;
 }
 
 .attribution {
