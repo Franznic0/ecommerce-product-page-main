@@ -293,11 +293,15 @@
   }
   main #product .purchase #add_to_cart {
     position: relative;
-    scale: 1;
     max-width: 20rem;
-    transition: scale 0.2s ease-in-out;
   }
-  main #product .purchase #add_to_cart ::before {
+  main section {
+    padding-inline: 2rem;
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+  .button::before {
     content: "";
     display: block;
     position: absolute;
@@ -307,12 +311,12 @@
     width: 100%;
     height: 100%;
     opacity: 0.3;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
   }
-  main #product .purchase #add_to_cart:hover ::before {
-    background-color: white;
+  .button:hover::before {
+    background-color: hsl(0, 0%, 100%);
   }
-  main section {
-    padding-inline: 2rem;
+  .cart-delete-product:hover {
+    cursor: pointer;
   }
 }/*# sourceMappingURL=desktop.css.map */

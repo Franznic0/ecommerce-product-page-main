@@ -153,14 +153,16 @@ header #user-wrapper #cart #cart_menu .cart_menu_header {
   border-bottom: 1px solid hsl(220, 14%, 75%);
 }
 header #user-wrapper #cart #cart_menu .cart_menu_body {
-  padding: 1rem;
+  padding: 2rem;
 }
 header #user-wrapper #cart #cart_menu .cart_menu_body p {
-  margin: 3rem auto;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 700;
   color: hsl(219, 9%, 45%);
+}
+header #user-wrapper #cart #cart_menu .cart_menu_body .cart_products {
+  margin: 3rem auto;
 }
 header #user-wrapper #cart #cart_menu.active {
   visibility: visible;
@@ -174,6 +176,38 @@ header #user-wrapper #user_menu {
   background-image: url(../images/image-avatar.png);
   background-position: center;
   background-size: cover;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 1rem;
+  padding: 0;
+}
+.cart-item .cart-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.cart-item .cart-item-wrapper .cart-product-preview {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+}
+.cart-item .cart-item-wrapper .cart-item-description-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.cart-item .cart-item-wrapper .cart-item-description-wrapper .cart-product-price {
+  color: black;
 }
 
 .carousel {
@@ -310,12 +344,9 @@ header #user-wrapper #user_menu {
   font-size: 1.2em;
 }
 
-#add_to_cart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: min(100%, 31rem);
+.button {
+  position: relative;
+  width: 100%;
   padding: 1rem;
   margin: auto;
   border: none;
@@ -323,6 +354,14 @@ header #user-wrapper #user_menu {
   color: hsl(25, 100%, 94%);
   font-weight: 700;
   border-radius: 10px;
+}
+
+#add_to_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: min(100%, 31rem);
   box-shadow: 0px 27px 37px -17px hsl(26, 100%, 55%);
 }
 #add_to_cart svg {

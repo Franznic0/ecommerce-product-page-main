@@ -163,13 +163,16 @@ header {
                 }
 
                 .cart_menu_body {
-                    padding: 1rem;
+                    padding: 2rem;
 
                     p {
-                        margin: 3rem auto;
                         width: fit-content;
                         font-weight: $fw-bold;
                         color: $fc-secondary-medium-dark;
+                    }
+                    
+                    .cart_products {
+                        margin: 3rem auto;
                     }
                 }
             }
@@ -179,16 +182,43 @@ header {
                 scale: 1;
             }
         }
-
+        
         #user_menu {
             width: 2rem;
             height: 2rem;
             border-radius: 50%;
             border: 2px solid white;
-
+            
             background-image: url(../images/image-avatar.png);
             background-position: center;
             background-size: cover;
+        }
+    }
+}
+
+.cart-item {
+    @include flex(center, center,2rem);
+    flex-direction: column;
+    padding: 1rem;
+    
+    padding: 0;
+    .cart-item-wrapper {
+        @include flex(space-between, center, .5rem);
+        width: 100%;
+
+        .cart-product-preview {
+            width: 4rem;
+            height: 4rem;
+            border-radius: $radius;
+        }
+
+        .cart-item-description-wrapper {
+            @include flex(center, left, .5rem);
+            flex-direction: column;
+
+            .cart-product-price {
+                color: black;
+            }
         }
     }
 }
@@ -330,10 +360,9 @@ header {
     }
 }
 
-#add_to_cart{
-    @include flex(center, center, 1rem);
-    width: min(100%, 31rem);
-
+.button {
+    position: relative;
+    width: 100%;
     padding: 1rem;
     margin: auto;
     border: none;
@@ -342,8 +371,12 @@ header {
     color: $pale-orange;
     font-weight: $fw-bold;
     border-radius: $radius;
+}
+#add_to_cart{
+    @include flex(center, center, 1rem);
+    width: min(100%, 31rem);
     box-shadow: 0px 27px 37px -17px $primary;
-
+    
     svg {
         width: fit-content;
         fill: $pale-orange;
