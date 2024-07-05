@@ -80,8 +80,8 @@
   header #user-wrapper #cart #cart_menu {
     top: 3rem;
     left: auto;
-    right: -6rem;
-    width: 20rem;
+    right: -8rem;
+    width: 25rem;
   }
   header #user-wrapper #cart-btn:hover,
   header #user-wrapper #user_menu:hover {
