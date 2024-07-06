@@ -157,7 +157,7 @@ function createCartElement() {
 
     cartItem.innerHTML = `
         <div class="cart-item-wrapper">
-            <img class="cart-product-preview" src="../images/image-product-1-thumbnail.jpg" alt="">
+            <img class="cart-product-preview" src="./images/image-product-1-thumbnail.jpg" alt="">
             <div class="cart-item-description-wrapper">
                 <p class="cart-product-name">
                     Fall Limited Edition Sneaker
