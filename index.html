@@ -18,7 +18,7 @@
 
   <header>
     <div id="menu_wrapper">
-      <div id="burger" role="button" tabindex="0">
+      <div id="burger" role="button" tabindex="0" aria-label="Open navigation menu">
         <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg>
       </div>
       
@@ -28,14 +28,14 @@
       
       <nav id="mobile-menu">
         <ul id="menu">
-          <li id="close_menu" tabindex="0">
+          <li id="close_menu" tabindex="0" aria-label="Close navigation menu">
             <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
           </li> 
-          <li class="links"><a href="#" tabindex="0">Collections</a></li>
-          <li class="links"><a href="#" tabindex="0">Men</a></li>
-          <li class="links"><a href="#" tabindex="0">Women</a></li>
-          <li class="links"><a href="#" tabindex="0">About</a></li>
-          <li class="links"><a href="#" tabindex="0">Contact</a></li>
+          <li class="links"><a href="#" tabindex="0" aria-label="Go to Collections">Collections</a></li>
+          <li class="links"><a href="#" tabindex="0" aria-label="Go to Men section">Men</a></li>
+          <li class="links"><a href="#" tabindex="0" aria-label="Go to Women section">Women</a></li>
+          <li class="links"><a href="#" tabindex="0" aria-label="Click here to learn more about us">About</a></li>
+          <li class="links"><a href="#" tabindex="0" aria-label="Click here to get in touch">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -43,7 +43,7 @@
     <div id="user-wrapper">
       <div id="cart">
         <!-- cart icon -->
-        <svg id="cart-btn" tabindex="0" width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
+        <svg id="cart-btn" tabindex="0" aria-label="Click here to open the basket" width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#69707D" fill-rule="nonzero"/></svg>
         
         <!-- cart items quantity -->
         <div class="cart-quantity"><span id="products-in-cart"></span></div>
@@ -67,19 +67,19 @@
     <!-- carousel section -->
     <section class="carousel">
       <div class="mySlides fade" tabindex="0" onclick="openModal()" onkeypress="openModal()">
-        <img src="./images/image-product-1.jpg" alt="">
+        <img src="./images/image-product-1.jpg" alt="Sneakers image">
       </div>
       
       <div class="mySlides fade" tabindex="0" onclick="openModal()" onkeypress="openModal()">
-        <img src="./images/image-product-2.jpg" alt="">
+        <img src="./images/image-product-2.jpg" alt="Sneakers image">
       </div>
 
       <div class="mySlides fade" tabindex="0" onclick="openModal()" onkeypress="openModal()">
-        <img src="./images/image-product-3.jpg" alt="">
+        <img src="./images/image-product-3.jpg" alt="Sneakers image">
       </div>
       
       <div class="mySlides fade" tabindex="0" onclick="openModal()" onkeypress="openModal()">
-        <img src="./images/image-product-4.jpg" alt="">
+        <img src="./images/image-product-4.jpg" alt="Sneakers image">
       </div>
 
       <!-- Next and previous buttons -->
@@ -120,19 +120,19 @@
 
           <!-- modal image -->
           <div class="mySlidesModal fade">
-            <img src="./images/image-product-1.jpg" alt="">
+            <img src="./images/image-product-1.jpg" alt="Sneakers image">
           </div>
           
           <div class="mySlidesModal fade">
-            <img src="./images/image-product-2.jpg"alt="">
+            <img src="./images/image-product-2.jpg"alt="Sneakers image">
           </div>
     
           <div class="mySlidesModal fade">
-            <img src="./images/image-product-3.jpg" alt="">
+            <img src="./images/image-product-3.jpg" alt="Sneakers image">
           </div>
           
           <div class="mySlidesModal fade">
-            <img src="./images/image-product-4.jpg" alt="">
+            <img src="./images/image-product-4.jpg" alt="Sneakers image">
           </div>
     
           <!-- Next and previous buttons -->
@@ -147,16 +147,16 @@
           <!-- Thumbnail images -->
           <div class="row">
             <div class="column thumb-modal" tabindex="0" onclick="currentSlideModal(1)" onkeypress="currentSlideModal(1)">
-              <img class="demo cursor" src="./images/image-product-1-thumbnail.jpg" alt="">
+              <img class="demo cursor" src="./images/image-product-1-thumbnail.jpg" alt="Sneakers image">
             </div>
             <div class="column thumb-modal" tabindex="0" onclick="currentSlideModal(2)" onkeypress="currentSlideModal(2)">
-              <img class="demo cursor" src="./images/image-product-2-thumbnail.jpg" alt="">
+              <img class="demo cursor" src="./images/image-product-2-thumbnail.jpg" alt="Sneakers image">
             </div>
             <div class="column thumb-modal" tabindex="0" onclick="currentSlideModal(3)" onkeypress="currentSlideModal(3)">
-              <img class="demo cursor" src="./images/image-product-3-thumbnail.jpg" alt="">
+              <img class="demo cursor" src="./images/image-product-3-thumbnail.jpg" alt="Sneakers image">
             </div>
             <div class="column thumb-modal" tabindex="0" onclick="currentSlideModal(4)" onkeypress="currentSlideModal(4)">
-              <img class="demo cursor" src="./images/image-product-4-thumbnail.jpg" alt="">
+              <img class="demo cursor" src="./images/image-product-4-thumbnail.jpg" alt="Sneakers image">
             </div>
           </div>
 
@@ -182,16 +182,16 @@
       <!-- product purchase -->
       <div class="purchase">
         <div class="select_quantity_wrapper">
-          <button id="subtract" onclick="changeQuantity(-1)" onkeypress="changeQuantity(-1)">
+          <button id="subtract" onclick="changeQuantity(-1)" onkeypress="changeQuantity(-1)" aria-label="Click here to reduce quantity">
             <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
           </button>
           <span class="quantity_to_add">0</span>
-          <button id="add" onclick="changeQuantity(1)" onkeypress="changeQuantity(1)">
+          <button id="add" onclick="changeQuantity(1)" onkeypress="changeQuantity(1)" aria-label="Click here to increase quantity">
             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
           </button>
         </div>
   
-        <button id="add_to_cart" class="button" onclick="addProductToCart()" onkeypress="addProductToCart()">
+        <button id="add_to_cart" class="button" onclick="addProductToCart()" onkeypress="addProductToCart()" aria-label="Click here to add to Basket">
           <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill-rule="nonzero"/></svg>
           <p class="button_description">Add to cart</p>
         </button>
@@ -204,8 +204,10 @@
   <!-- attribution -->
   <footer>
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="https://franznico.netlify.app/" target="_blank">Francesco Nicolosi</a>.
+      <P>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" aria-label="Click here to visit Frontend Mentor">Frontend Mentor</a>. 
+        Coded by <a href="https://franznico.netlify.app/" target="_blank" aria-label="Click here to visit my Portfolio page">Francesco Nicolosi</a>.
+      </P>
     </div>
   </footer>
   
